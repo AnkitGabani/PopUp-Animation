@@ -3,16 +3,16 @@
 #import "FTAnimation+UIView.h"
 
 // Open
-DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
     self.viewKeyboard.isHidden = false
 }
         
-self.viewKeyboard.slideIn(from: kFTAnimationBottom, in: self.viewKeyboard.superview, duration: 0.4, delegate: self, start: Selector("temp"), stop: Selector("temp"))
+self.viewKeyboard.slideIn(from: kFTAnimationBottom, in: self.viewKeyboard.superview, duration: 0.6, delegate: self, start: Selector("temp"), stop: Selector("temp"))
 
 
 // Close
  self.viewKeyboard.slideOut(to: kFTAnimationBottom, in: self.viewKeyboard.superview, duration: 0.4, delegate: self, start: Selector("temp"), stop: Selector("temp"))
         
-DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
     self.viewKeyboard.isHidden = true
 }
